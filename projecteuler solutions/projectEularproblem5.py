@@ -1,13 +1,14 @@
-minmlt = 0
-minmlt1 = 0
-temp = 1
-while minmlt > 0:
-    for i in range(1,20):
-        if minmlt % i == 0:
-           temp = minmlt
-           minmlt = temp
- 
-        else:
-            minmlt +=1
+def is_divisible_1_to_20(number):
+    for i in range(1, 21):
+        if number % i != 0:
+            return False
+    return True
 
-        print(minmlt)
+number = 1
+
+while True:
+    if is_divisible_1_to_20(number):
+        break
+    number += 1
+
+print(number)

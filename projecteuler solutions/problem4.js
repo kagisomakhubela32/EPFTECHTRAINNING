@@ -1,9 +1,12 @@
 //Outter LOOP VALUES
-minI = 100;
-maxI = 999;
+let minI = document.getElementById('minI');
+let maxI = document.getElementById('maxI');
 //Inner LOOP VALUES
-minJ = 100;
-maxJ = 999;
+let minJ = document.getElementById('minJ');
+let maxJ = document.getElementById('maxJ');
+
+let out1 = document.getElementById('output');
+
 
 //Function to check if a number is a palindrome
 function palindrome(value){
@@ -55,5 +58,10 @@ function largestPalindrome(){
     }
     return largest;
 }
+answer = largestPalindrome();
 //Print the largest palindrome
-console.log(largestPalindrome());
+function fun(){
+    out1.innerHTML = answer.value;
+}
+Submit.addEventListener('click',fun);
+//console.log(largestPalindrome());

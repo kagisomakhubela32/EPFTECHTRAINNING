@@ -1,16 +1,8 @@
-#
-num = 56
-num2 = 0 
-prim = 2
-arr = []
-
-while num > 1:
-    if  num % prim == 0 :
-        num2 = num / prim
-        #print(prim)
-        arr.append(prim)
-        num = num2
-    else:
-        prim += 1
-
-print(arr)
+for i in range(2,600851475143):
+    if 600851475143 % i == 0:
+        for x in range(2,i):
+            if i % x == 0:
+                break
+            else:
+                prim = i
+        print(prim)
